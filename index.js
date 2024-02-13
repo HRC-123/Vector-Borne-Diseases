@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require("path");
-
-
+let port = 1234;
+let hostname = '0.0.0.0';
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 const static_path = path.join(__dirname, "/public");
@@ -13,7 +13,7 @@ app.set("layout", "../Templates/main");
 
 app.use('/',require('./server/routes/route'));
 
-app.listen(1234,()=>{
+app.listen(process.env.PORT || port,hostname,()=>{
     console.log('Server is running on port : 1234');
     // console.log(__dirname);
 })
