@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    height:100vh;
+}
+
+*{
+    margin:0;
+}
+/* body,*{
+    width:1100px;
+    margin-left:90px;
+    margin-right:90px;
+} */
+
+/* .mapshower{
+    height:45%;
+    width:100%;
+} */
+
+.map{
+    margin-left:6%;
+    /* border:2px solid black; */
+    width:700px;height:400px;
+}
+
+
+
+  
+
