@@ -3,7 +3,7 @@
 
 
 body{
-    height:100vh;
+    height: 612px;
 }
 
 *{
@@ -21,11 +21,14 @@ body{
 } */
 
 .map{
-    margin-left:6%;
+    margin:0 6%;
     /* border:2px solid black; */
-    width:700px;height:400px;
 }
 
+iframe{
+    width:100%;
+    aspect-ratio: 1.75;
+}
 
 
   

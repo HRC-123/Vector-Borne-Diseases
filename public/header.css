@@ -99,7 +99,9 @@ body{
 .various>a{
     all: unset;
 }
-
+.various>a:hover{
+    cursor:pointer;
+}
 /* This will apply a blue underline to the link that has the class "current" */
 a.current {
     text-decoration:underline; 
