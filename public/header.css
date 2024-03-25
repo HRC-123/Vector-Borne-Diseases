@@ -1,127 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-body{
-    height:100vh;
+body {
+  height: 100vh;
 }
 
-*{
-    margin:0;
+* {
+  margin: 0;
 }
 /* body,*{
     width:1100px;
     margin-left:90px;
     margin-right:90px;
 } */
-.top{
-    display:flex;
-    flex-direction:row;
-    gap:10px;
-    height:8%;
-    width:100%;
-    /* background-color: red; */
-  align-items:center;
+.top {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 8%;
+  width: 100%;
+  /* background-color: red; */
+  align-items: center;
 }
 
-
-
-.top>div{
-    font-family: "Noto Sans", sans-serif;
+.top > div {
+  font-family: "Noto Sans", sans-serif;
 }
 
-.dp{
-    padding-left:10%;
-    font-family: "Noto Sans", sans-serif;
+.dp {
+  padding-left: 10%;
+  font-family: "Noto Sans", sans-serif;
 }
 
-
-.represent{
-    height:18%;
-    display:flex;
-    align-items:center;
-    padding-left:10%;
-    background-color:#001437;
-    font-size:22px;
-    font-family: "Noto Sans", sans-serif;
-    font-weight:bold;
-    color:white;
+.represent {
+  height: 18%;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  background-color: #001437;
+  font-size: 22px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
-.form{
-   
-    height:13%;
-    font-size:16px;
-    /* background-color:blueviolet; */
-    width:100%;
-    
+.form {
+  height: 13%;
+  font-size: 16px;
+  /* background-color:blueviolet; */
+  width: 100%;
 }
 
-.selection{
-    display:flex;
-    align-items:center;
-    height:100%;
-    justify-content: space-around;
-    
-
+.selection {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
 }
 
+.selection > select,
+button,
+input {
+  font-size: 22px;
+  border: 2px solid #001437;
+  border-radius: 0.3rem;
 
-.selection>select,button,input{
-    font-size:22px;
-    border:2px solid #001437;
-    border-radius:0.3rem;
-    
-    color:#001437;
-    
+  color: #001437;
 }
 
-.various{
-    display:flex;
-    flex-direction:row;
-    /* justify-content:; */
-    margin-left:10%;
-    gap:6%;
-    height:10%;
-    align-items: center;
-    font-family: "Noto Sans", sans-serif;
-    font-weight:bold;
-    padding: 1rem;
+.various {
+  display: flex;
+  flex-direction: row;
+  /* justify-content:; */
+  margin-left: 10%;
+  gap: 6%;
+  height: 10%;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  padding: 1rem;
 }
 
- /* .Cases{
+/* .Cases{
     text-decoration:underline; 
     text-decoration-color:#009ce1; 
     text-decoration-thickness:3px;
     text-underline-offset: 5px;
     transition: text-decoration 10s ease-in-out;
 } */
-.various>a{
-    all: unset;
+
+.represent > a {
+  all: unset;
+  padding-left: 40%;
 }
-.various>a:hover{
-    cursor:pointer;
+.various > a {
+  all: unset;
+}
+.various > a:hover {
+  cursor: pointer;
 }
 /* This will apply a blue underline to the link that has the class "current" */
 a.current {
-    text-decoration:underline; 
-    text-decoration-color:#009ce1; 
-    text-decoration-thickness:3px;
-    text-underline-offset: 5px;
-    transition: text-decoration 10s ease-in-out;
-  }
+  text-decoration: underline;
+  text-decoration-color: #009ce1;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+  transition: text-decoration 10s ease-in-out;
+}
 
-  /* This will apply a red underline to the link when it is clicked
+/* This will apply a red underline to the link when it is clicked
 a:active {
     text-decoration: underline;
     color: red;
   } */
 
-  /* This will apply a green underline to the link after it has been visited */
+/* This will apply a green underline to the link after it has been visited */
 /* a:visited {
     text-decoration: underline;
     color: green;
   } */
-  
-  
-
