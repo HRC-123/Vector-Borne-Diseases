@@ -1,0 +1,265 @@
+District,Month,2017,2018,2019,2020
+Amritsar,January,0,1,1,0
+Amritsar,February,1,1,0,0
+Amritsar,March,0,1,0,0
+Amritsar,April,0,1,0,0
+Amritsar,May,0,1,0,0
+Amritsar,June,0,1,0,0
+Amritsar,July,5,2,1,0
+Amritsar,August,3,2,1,0
+Amritsar,September,4,2,1,1
+Amritsar,October,6,2,0,0
+Amritsar,November,5,2,0,0
+Amritsar,December,2,0,0,0
+Barnala,January,0,0,0,0
+Barnala,February,0,0,0,0
+Barnala,March,1,0,0,0
+Barnala,April,0,0,0,0
+Barnala,May,0,0,0,0
+Barnala,June,0,0,0,0
+Barnala,July,1,1,2,0
+Barnala,August,1,0,2,0
+Barnala,September,1,0,1,0
+Barnala,October,1,0,1,0
+Barnala,November,1,0,0,0
+Barnala,December,1,0,0,0
+Bathinda,January,3,4,8,1
+Bathinda,February,4,3,7,1
+Bathinda,March,1,4,8,1
+Bathinda,April,0,4,8,1
+Bathinda,May,2,4,7,1
+Bathinda,June,5,4,26,2
+Bathinda,July,8,10,52,2
+Bathinda,August,7,7,31,1
+Bathinda,September,6,5,12,1
+Bathinda,October,8,5,6,1
+Bathinda,November,9,4,6,1
+Bathinda,December,2,0,0,0
+Faridkot,January,1,2,4,0
+Faridkot,February,0,1,3,0
+Faridkot,March,0,1,4,0
+Faridkot,April,1,1,4,0
+Faridkot,May,0,1,3,0
+Faridkot,June,2,1,6,1
+Faridkot,July,3,6,8,1
+Faridkot,August,3,3,5,0
+Faridkot,September,1,2,1,1
+Faridkot,October,2,1,1,0
+Faridkot,November,2,0,1,0
+Faridkot,December,1,0,0,0
+Fatehgarh Sahib,January,0,1,1,0
+Fatehgarh Sahib,February,0,0,0,0
+Fatehgarh Sahib,March,0,0,0,0
+Fatehgarh Sahib,April,0,0,0,0
+Fatehgarh Sahib,May,0,0,0,0
+Fatehgarh Sahib,June,1,1,1,0
+Fatehgarh Sahib,July,1,2,3,1
+Fatehgarh Sahib,August,1,0,3,0
+Fatehgarh Sahib,September,1,1,2,1
+Fatehgarh Sahib,October,1,0,1,0
+Fatehgarh Sahib,November,0,0,1,0
+Fatehgarh Sahib,December,0,0,0,0
+Fazilka,January,0,1,1,1
+Fazilka,February,0,0,0,1
+Fazilka,March,0,0,0,1
+Fazilka,April,1,0,0,1
+Fazilka,May,0,0,0,0
+Fazilka,June,1,1,1,1
+Fazilka,July,1,3,11,1
+Fazilka,August,1,2,6,1
+Fazilka,September,1,1,4,0
+Fazilka,October,2,1,3,1
+Fazilka,November,1,0,2,0
+Fazilka,December,1,1,0,0
+Ferozepur,January,0,1,1,0
+Ferozepur,February,1,1,1,0
+Ferozepur,March,0,1,1,0
+Ferozepur,April,2,1,1,0
+Ferozepur,May,0,0,1,0
+Ferozepur,June,2,2,2,0
+Ferozepur,July,3,4,1,0
+Ferozepur,August,4,1,0,0
+Ferozepur,September,3,2,1,0
+Ferozepur,October,3,1,0,0
+Ferozepur,November,1,1,1,0
+Ferozepur,December,0,0,0,0
+Gurdaspur,January,0,1,2,0
+Gurdaspur,February,0,0,2,0
+Gurdaspur,March,0,1,2,0
+Gurdaspur,April,0,2,2,0
+Gurdaspur,May,0,1,2,0
+Gurdaspur,June,2,1,2,1
+Gurdaspur,July,3,2,7,1
+Gurdaspur,August,1,1,3,0
+Gurdaspur,September,1,2,3,1
+Gurdaspur,October,2,1,1,0
+Gurdaspur,November,1,1,1,0
+Gurdaspur,December,2,0,0,0
+Hoshiarpur,January,17,8,14,3
+Hoshiarpur,February,13,7,12,3
+Hoshiarpur,March,8,8,14,3
+Hoshiarpur,April,12,8,14,3
+Hoshiarpur,May,5,7,12,3
+Hoshiarpur,June,6,10,38,6
+Hoshiarpur,July,13,26,80,6
+Hoshiarpur,August,10,24,73,6
+Hoshiarpur,September,17,12,39,4
+Hoshiarpur,October,19,12,28,4
+Hoshiarpur,November,17,10,16,4
+Hoshiarpur,December,17,0,1,0
+Jalandhar,January,3,1,1,0
+Jalandhar,February,4,1,0,0
+Jalandhar,March,0,1,0,0
+Jalandhar,April,3,1,0,0
+Jalandhar,May,3,1,0,0
+Jalandhar,June,6,1,1,1
+Jalandhar,July,6,5,2,1
+Jalandhar,August,6,2,2,0
+Jalandhar,September,6,2,1,0
+Jalandhar,October,6,1,0,0
+Jalandhar,November,6,0,0,0
+Jalandhar,December,7,1,0,0
+Kapurthala,January,0,0,0,0
+Kapurthala,February,0,0,0,0
+Kapurthala,March,0,0,0,0
+Kapurthala,April,0,0,0,0
+Kapurthala,May,0,0,0,0
+Kapurthala,June,0,0,0,0
+Kapurthala,July,1,1,1,0
+Kapurthala,August,2,0,0,0
+Kapurthala,September,2,0,1,0
+Kapurthala,October,2,0,0,0
+Kapurthala,November,1,0,0,0
+Kapurthala,December,0,0,0,0
+Ludhiana,January,2,4,2,1
+Ludhiana,February,2,3,1,1
+Ludhiana,March,2,3,1,1
+Ludhiana,April,2,3,1,1
+Ludhiana,May,2,4,1,1
+Ludhiana,June,2,4,2,2
+Ludhiana,July,5,11,6,3
+Ludhiana,August,6,5,5,1
+Ludhiana,September,4,4,3,1
+Ludhiana,October,4,2,3,1
+Ludhiana,November,2,2,1,1
+Ludhiana,December,2,1,0,0
+Mansa,January,9,12,18,4
+Mansa,February,5,8,12,4
+Mansa,March,20,10,15,4
+Mansa,April,15,10,15,4
+Mansa,May,12,10,12,4
+Mansa,June,20,14,34,5
+Mansa,July,15,32,76,2
+Mansa,August,16,18,50,2
+Mansa,September,10,8,26,1
+Mansa,October,10,5,20,0
+Mansa,November,10,3,18,0
+Mansa,December,10,1,4,1
+Moga,January,0,0,0,0
+Moga,February,0,0,0,0
+Moga,March,0,0,0,0
+Moga,April,0,0,0,0
+Moga,May,0,0,0,0
+Moga,June,2,0,0,1
+Moga,July,1,1,1,0
+Moga,August,1,0,1,0
+Moga,September,1,0,1,0
+Moga,October,0,0,0,0
+Moga,November,0,0,0,0
+Moga,December,0,0,0,0
+Pathankot,January,0,0,0,0
+Pathankot,February,0,0,0,0
+Pathankot,March,0,0,0,0
+Pathankot,April,0,0,0,0
+Pathankot,May,0,0,0,0
+Pathankot,June,1,0,0,0
+Pathankot,July,1,3,2,0
+Pathankot,August,0,0,2,0
+Pathankot,September,1,1,2,1
+Pathankot,October,0,0,0,0
+Pathankot,November,0,0,1,0
+Pathankot,December,0,1,0,0
+Patiala,January,2,3,4,0
+Patiala,February,2,2,3,0
+Patiala,March,2,2,3,0
+Patiala,April,2,2,3,0
+Patiala,May,2,2,3,0
+Patiala,June,2,3,4,0
+Patiala,July,2,6,6,0
+Patiala,August,2,3,3,1
+Patiala,September,3,2,1,1
+Patiala,October,4,2,1,0
+Patiala,November,6,0,0,0
+Patiala,December,2,0,0,0
+Rupnagar,January,0,0,2,0
+Rupnagar,February,0,0,1,0
+Rupnagar,March,0,0,1,0
+Rupnagar,April,0,0,1,0
+Rupnagar,May,0,0,1,0
+Rupnagar,June,2,0,2,0
+Rupnagar,July,2,1,1,0
+Rupnagar,August,2,0,0,1
+Rupnagar,September,3,1,0,1
+Rupnagar,October,0,0,1,0
+Rupnagar,November,0,0,0,0
+Rupnagar,December,0,0,0,0
+Sahibzada Ajit Singh Nagar (Mohali),January,5,8,8,2
+Sahibzada Ajit Singh Nagar (Mohali),February,6,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),March,8,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),April,4,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),May,10,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),June,15,12,22,6
+Sahibzada Ajit Singh Nagar (Mohali),July,16,22,41,3
+Sahibzada Ajit Singh Nagar (Mohali),August,18,16,36,1
+Sahibzada Ajit Singh Nagar (Mohali),September,16,5,15,0
+Sahibzada Ajit Singh Nagar (Mohali),October,10,3,7,1
+Sahibzada Ajit Singh Nagar (Mohali),November,10,1,5,0
+Sahibzada Ajit Singh Nagar (Mohali),December,10,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),January,0,0,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),February,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),March,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),April,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),May,1,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),June,0,0,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),July,0,2,4,0
+Nawanshahr (Shahid Bhagat Singh Nagar),August,0,0,2,0
+Nawanshahr (Shahid Bhagat Singh Nagar),September,0,0,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),October,0,2,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),November,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),December,0,0,0,0
+Sangrur,January,0,1,1,1
+Sangrur,February,0,1,0,1
+Sangrur,March,0,1,0,1
+Sangrur,April,0,1,0,1
+Sangrur,May,0,1,0,0
+Sangrur,June,0,1,1,0
+Sangrur,July,1,4,2,1
+Sangrur,August,1,3,2,0
+Sangrur,September,1,2,1,0
+Sangrur,October,3,1,0,0
+Sangrur,November,0,0,0,0
+Sangrur,December,0,0,0,0
+Shr Mukatsar Sahib,January,0,3,4,1
+Shr Mukatsar Sahib,February,2,2,3,1
+Shr Mukatsar Sahib,March,2,2,4,1
+Shr Mukatsar Sahib,April,3,3,4,1
+Shr Mukatsar Sahib,May,4,3,3,1
+Shr Mukatsar Sahib,June,4,4,8,1
+Shr Mukatsar Sahib,July,8,9,8,0
+Shr Mukatsar Sahib,August,9,3,2,0
+Shr Mukatsar Sahib,September,6,2,1,0
+Shr Mukatsar Sahib,October,7,1,1,0
+Shr Mukatsar Sahib,November,0,0,2,0
+Shr Mukatsar Sahib,December,0,1,0,0
+Tarn Taran,January,0,1,1,0
+Tarn Taran,February,0,1,1,0
+Tarn Taran,March,0,1,1,0
+Tarn Taran,April,0,1,1,0
+Tarn Taran,May,1,1,1,0
+Tarn Taran,June,1,1,1,0
+Tarn Taran,July,1,4,0,1
+Tarn Taran,August,2,2,0,0
+Tarn Taran,September,4,1,0,0
+Tarn Taran,October,6,0,0,0
+Tarn Taran,November,0,0,0,0
+Tarn Taran,December,0,0,0,0
