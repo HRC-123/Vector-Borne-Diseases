@@ -1,4 +1,6 @@
-[
+{
+    "District": "fazilka",
+    "data": [
     {
         "Year": "2017",
         "Month": "1",
@@ -384,3 +386,4 @@
         "Avg_Precipitation": "0.41290322580645156"
     }
 ]
+}
