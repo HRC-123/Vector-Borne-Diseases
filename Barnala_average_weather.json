@@ -1,4 +1,6 @@
-[
+{
+    "District": "barnala",
+    "data": [
     {
         "Year": "2017",
         "Month": "1",
@@ -384,3 +386,4 @@
         "Avg_Precipitation": "0.19999999999999998"
     }
 ]
+}
