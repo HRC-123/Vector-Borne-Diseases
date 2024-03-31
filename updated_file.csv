@@ -1,0 +1,265 @@
+District,Month,2017,2018,2019,2020
+Amritsar,1,0,1,1,0
+Amritsar,2,1,1,0,0
+Amritsar,3,0,1,0,0
+Amritsar,4,0,1,0,0
+Amritsar,5,0,1,0,0
+Amritsar,6,0,1,0,0
+Amritsar,7,5,2,1,0
+Amritsar,8,3,2,1,0
+Amritsar,9,4,2,1,1
+Amritsar,10,6,2,0,0
+Amritsar,11,5,2,0,0
+Amritsar,12,2,0,0,0
+Barnala,1,0,0,0,0
+Barnala,2,0,0,0,0
+Barnala,3,1,0,0,0
+Barnala,4,0,0,0,0
+Barnala,5,0,0,0,0
+Barnala,6,0,0,0,0
+Barnala,7,1,1,2,0
+Barnala,8,1,0,2,0
+Barnala,9,1,0,1,0
+Barnala,10,1,0,1,0
+Barnala,11,1,0,0,0
+Barnala,12,1,0,0,0
+Bathinda,1,3,4,8,1
+Bathinda,2,4,3,7,1
+Bathinda,3,1,4,8,1
+Bathinda,4,0,4,8,1
+Bathinda,5,2,4,7,1
+Bathinda,6,5,4,26,2
+Bathinda,7,8,10,52,2
+Bathinda,8,7,7,31,1
+Bathinda,9,6,5,12,1
+Bathinda,10,8,5,6,1
+Bathinda,11,9,4,6,1
+Bathinda,12,2,0,0,0
+Faridkot,1,1,2,4,0
+Faridkot,2,0,1,3,0
+Faridkot,3,0,1,4,0
+Faridkot,4,1,1,4,0
+Faridkot,5,0,1,3,0
+Faridkot,6,2,1,6,1
+Faridkot,7,3,6,8,1
+Faridkot,8,3,3,5,0
+Faridkot,9,1,2,1,1
+Faridkot,10,2,1,1,0
+Faridkot,11,2,0,1,0
+Faridkot,12,1,0,0,0
+Fatehgarh Sahib,1,0,1,1,0
+Fatehgarh Sahib,2,0,0,0,0
+Fatehgarh Sahib,3,0,0,0,0
+Fatehgarh Sahib,4,0,0,0,0
+Fatehgarh Sahib,5,0,0,0,0
+Fatehgarh Sahib,6,1,1,1,0
+Fatehgarh Sahib,7,1,2,3,1
+Fatehgarh Sahib,8,1,0,3,0
+Fatehgarh Sahib,9,1,1,2,1
+Fatehgarh Sahib,10,1,0,1,0
+Fatehgarh Sahib,11,0,0,1,0
+Fatehgarh Sahib,12,0,0,0,0
+Fazilka,1,0,1,1,1
+Fazilka,2,0,0,0,1
+Fazilka,3,0,0,0,1
+Fazilka,4,1,0,0,1
+Fazilka,5,0,0,0,0
+Fazilka,6,1,1,1,1
+Fazilka,7,1,3,11,1
+Fazilka,8,1,2,6,1
+Fazilka,9,1,1,4,0
+Fazilka,10,2,1,3,1
+Fazilka,11,1,0,2,0
+Fazilka,12,1,1,0,0
+Ferozepur,1,0,1,1,0
+Ferozepur,2,1,1,1,0
+Ferozepur,3,0,1,1,0
+Ferozepur,4,2,1,1,0
+Ferozepur,5,0,0,1,0
+Ferozepur,6,2,2,2,0
+Ferozepur,7,3,4,1,0
+Ferozepur,8,4,1,0,0
+Ferozepur,9,3,2,1,0
+Ferozepur,10,3,1,0,0
+Ferozepur,11,1,1,1,0
+Ferozepur,12,0,0,0,0
+Gurdaspur,1,0,1,2,0
+Gurdaspur,2,0,0,2,0
+Gurdaspur,3,0,1,2,0
+Gurdaspur,4,0,2,2,0
+Gurdaspur,5,0,1,2,0
+Gurdaspur,6,2,1,2,1
+Gurdaspur,7,3,2,7,1
+Gurdaspur,8,1,1,3,0
+Gurdaspur,9,1,2,3,1
+Gurdaspur,10,2,1,1,0
+Gurdaspur,11,1,1,1,0
+Gurdaspur,12,2,0,0,0
+Hoshiarpur,1,17,8,14,3
+Hoshiarpur,2,13,7,12,3
+Hoshiarpur,3,8,8,14,3
+Hoshiarpur,4,12,8,14,3
+Hoshiarpur,5,5,7,12,3
+Hoshiarpur,6,6,10,38,6
+Hoshiarpur,7,13,26,80,6
+Hoshiarpur,8,10,24,73,6
+Hoshiarpur,9,17,12,39,4
+Hoshiarpur,10,19,12,28,4
+Hoshiarpur,11,17,10,16,4
+Hoshiarpur,12,17,0,1,0
+Jalandhar,1,3,1,1,0
+Jalandhar,2,4,1,0,0
+Jalandhar,3,0,1,0,0
+Jalandhar,4,3,1,0,0
+Jalandhar,5,3,1,0,0
+Jalandhar,6,6,1,1,1
+Jalandhar,7,6,5,2,1
+Jalandhar,8,6,2,2,0
+Jalandhar,9,6,2,1,0
+Jalandhar,10,6,1,0,0
+Jalandhar,11,6,0,0,0
+Jalandhar,12,7,1,0,0
+Kapurthala,1,0,0,0,0
+Kapurthala,2,0,0,0,0
+Kapurthala,3,0,0,0,0
+Kapurthala,4,0,0,0,0
+Kapurthala,5,0,0,0,0
+Kapurthala,6,0,0,0,0
+Kapurthala,7,1,1,1,0
+Kapurthala,8,2,0,0,0
+Kapurthala,9,2,0,1,0
+Kapurthala,10,2,0,0,0
+Kapurthala,11,1,0,0,0
+Kapurthala,12,0,0,0,0
+Ludhiana,1,2,4,2,1
+Ludhiana,2,2,3,1,1
+Ludhiana,3,2,3,1,1
+Ludhiana,4,2,3,1,1
+Ludhiana,5,2,4,1,1
+Ludhiana,6,2,4,2,2
+Ludhiana,7,5,11,6,3
+Ludhiana,8,6,5,5,1
+Ludhiana,9,4,4,3,1
+Ludhiana,10,4,2,3,1
+Ludhiana,11,2,2,1,1
+Ludhiana,12,2,1,0,0
+Mansa,1,9,12,18,4
+Mansa,2,5,8,12,4
+Mansa,3,20,10,15,4
+Mansa,4,15,10,15,4
+Mansa,5,12,10,12,4
+Mansa,6,20,14,34,5
+Mansa,7,15,32,76,2
+Mansa,8,16,18,50,2
+Mansa,9,10,8,26,1
+Mansa,10,10,5,20,0
+Mansa,11,10,3,18,0
+Mansa,12,10,1,4,1
+Moga,1,0,0,0,0
+Moga,2,0,0,0,0
+Moga,3,0,0,0,0
+Moga,4,0,0,0,0
+Moga,5,0,0,0,0
+Moga,6,2,0,0,1
+Moga,7,1,1,1,0
+Moga,8,1,0,1,0
+Moga,9,1,0,1,0
+Moga,10,0,0,0,0
+Moga,11,0,0,0,0
+Moga,12,0,0,0,0
+Pathankot,1,0,0,0,0
+Pathankot,2,0,0,0,0
+Pathankot,3,0,0,0,0
+Pathankot,4,0,0,0,0
+Pathankot,5,0,0,0,0
+Pathankot,6,1,0,0,0
+Pathankot,7,1,3,2,0
+Pathankot,8,0,0,2,0
+Pathankot,9,1,1,2,1
+Pathankot,10,0,0,0,0
+Pathankot,11,0,0,1,0
+Pathankot,12,0,1,0,0
+Patiala,1,2,3,4,0
+Patiala,2,2,2,3,0
+Patiala,3,2,2,3,0
+Patiala,4,2,2,3,0
+Patiala,5,2,2,3,0
+Patiala,6,2,3,4,0
+Patiala,7,2,6,6,0
+Patiala,8,2,3,3,1
+Patiala,9,3,2,1,1
+Patiala,10,4,2,1,0
+Patiala,11,6,0,0,0
+Patiala,12,2,0,0,0
+Rupnagar,1,0,0,2,0
+Rupnagar,2,0,0,1,0
+Rupnagar,3,0,0,1,0
+Rupnagar,4,0,0,1,0
+Rupnagar,5,0,0,1,0
+Rupnagar,6,2,0,2,0
+Rupnagar,7,2,1,1,0
+Rupnagar,8,2,0,0,1
+Rupnagar,9,3,1,0,1
+Rupnagar,10,0,0,1,0
+Rupnagar,11,0,0,0,0
+Rupnagar,12,0,0,0,0
+Sahibzada Ajit Singh Nagar (Mohali),1,5,8,8,2
+Sahibzada Ajit Singh Nagar (Mohali),2,6,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),3,8,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),4,4,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),5,10,7,7,2
+Sahibzada Ajit Singh Nagar (Mohali),6,15,12,22,6
+Sahibzada Ajit Singh Nagar (Mohali),7,16,22,41,3
+Sahibzada Ajit Singh Nagar (Mohali),8,18,16,36,1
+Sahibzada Ajit Singh Nagar (Mohali),9,16,5,15,0
+Sahibzada Ajit Singh Nagar (Mohali),10,10,3,7,1
+Sahibzada Ajit Singh Nagar (Mohali),11,10,1,5,0
+Sahibzada Ajit Singh Nagar (Mohali),12,10,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),1,0,0,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),2,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),3,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),4,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),5,1,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),6,0,0,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),7,0,2,4,0
+Nawanshahr (Shahid Bhagat Singh Nagar),8,0,0,2,0
+Nawanshahr (Shahid Bhagat Singh Nagar),9,0,0,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),10,0,2,1,0
+Nawanshahr (Shahid Bhagat Singh Nagar),11,0,0,0,0
+Nawanshahr (Shahid Bhagat Singh Nagar),12,0,0,0,0
+Sangrur,1,0,1,1,1
+Sangrur,2,0,1,0,1
+Sangrur,3,0,1,0,1
+Sangrur,4,0,1,0,1
+Sangrur,5,0,1,0,0
+Sangrur,6,0,1,1,0
+Sangrur,7,1,4,2,1
+Sangrur,8,1,3,2,0
+Sangrur,9,1,2,1,0
+Sangrur,10,3,1,0,0
+Sangrur,11,0,0,0,0
+Sangrur,12,0,0,0,0
+Shr Mukatsar Sahib,1,0,3,4,1
+Shr Mukatsar Sahib,2,2,2,3,1
+Shr Mukatsar Sahib,3,2,2,4,1
+Shr Mukatsar Sahib,4,3,3,4,1
+Shr Mukatsar Sahib,5,4,3,3,1
+Shr Mukatsar Sahib,6,4,4,8,1
+Shr Mukatsar Sahib,7,8,9,8,0
+Shr Mukatsar Sahib,8,9,3,2,0
+Shr Mukatsar Sahib,9,6,2,1,0
+Shr Mukatsar Sahib,10,7,1,1,0
+Shr Mukatsar Sahib,11,0,0,2,0
+Shr Mukatsar Sahib,12,0,1,0,0
+Tarn Taran,1,0,1,1,0
+Tarn Taran,2,0,1,1,0
+Tarn Taran,3,0,1,1,0
+Tarn Taran,4,0,1,1,0
+Tarn Taran,5,1,1,1,0
+Tarn Taran,6,1,1,1,0
+Tarn Taran,7,1,4,0,1
+Tarn Taran,8,2,2,0,0
+Tarn Taran,9,4,1,0,0
+Tarn Taran,10,6,0,0,0
+Tarn Taran,11,0,0,0,0
+Tarn Taran,12,0,0,0,0
