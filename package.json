@@ -18,8 +18,8 @@
     "express-flash-messages": "^0.1.1",
     "express-session": "^1.18.0",
     "method-override": "^3.0.0",
-    "mongoose": "^8.1.2",
-    "nodemon": "^3.0.3",
+    "mongoose": "^8.2.0",
+    "nodemon": "^3.1.0",
     "path": "^0.12.7"
   }
 }
