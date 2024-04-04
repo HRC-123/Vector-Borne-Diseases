@@ -11,7 +11,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/Templates"));
 app.set("layout", "../Templates/main");
 
-app.use('/',require('./server/routes/route'));
+app.use('/', require('./server/routes/route'));
+require('dotenv').config();
+const connectDB = require("./server/config/db");
+connectDB();
 
 app.listen(process.env.PORT || port,hostname,()=>{
     console.log('Server is running on port : 1234');
