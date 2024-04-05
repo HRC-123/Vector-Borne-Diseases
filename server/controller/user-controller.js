@@ -4,7 +4,7 @@ const PredictedCases = require("../models/predicted");
 //GET
 //Home Page
 exports.homepage = async (req, res) => {
-  const name = "Cases";
+  const name = "Analysed Cases";
   res.render("main", { page_name: "main", name });
 };
 exports.vaccines = async (req, res) => {
@@ -25,12 +25,12 @@ exports.data = async (req, res) => {
 };
 
 exports.predmain = async (req, res) => {
-  const name = "Prediction Cases";
+  const name = "Predicted Cases";
   res.render("predmain", { page_name: "prediction-main", name });
 };
 
 exports.getTheData = async (req, res) => {
-  const name = "Prediction Cases";
+  const name = "Predicted Cases";
   console.log("hii boys");
   const body = await req.body;
   console.log(req.body);

@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+
 .searchdata {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin: 2%;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bolder;
+  
 }
+
+.map{
+    margin:0 6%;
+    /* border:2px solid black; */
+}
+
+iframe{
+    width:100%;
+    aspect-ratio: 1.75;
+}
+
