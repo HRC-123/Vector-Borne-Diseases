@@ -34,20 +34,22 @@ exports.getTheData = async (req, res) => {
   console.log("hii boys");
   const body = await req.body;
   console.log(req.body);
+  // const location1 = "moga%2Cpunjab";
   const location = body.location;
   const from = body.from;
   const to = body.to;
+  let key = "EJ36RA47MPQKB6JB39SDUEKV8";
 
   console.log(location, from, to);
   const response = await fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${from}/${to}?unitGroup=metric&include=days&key=MLUDFLSH2DWH4PJ8HWDFPCSNB&contentType=json`
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${from}/${to}?unitGroup=metric&include=days&key=${key}&contentType=json`
   );
   const data = await response.json();
 
   // console.log(data)
 
   const { spawn } = require("child_process");
-  const childPython = spawn("python", ["pred.py", data]);
+  const childPython = spawn("python", ["pred.py", location]);
 let pythonFinished = false;
   // Pass the JSON data to the Python script through stdin
   childPython.stdin.write(JSON.stringify(data));
@@ -63,9 +65,16 @@ let pythonFinished = false;
 
   childPython.on("close", async (code) => {
     console.log(`child process exited with code :  ${code}`);
-     pythonFinished = true;
-     uploadToMongoDB();
-  });
+
+    // if (code == 0) {
+    //    pythonFinished = true;
+    // }
+
+    pythonFinished = true;
+    await uploadToMongoDB();
+    
+    
+  })
 
   // Upload to mongodb
 
@@ -75,11 +84,17 @@ let pythonFinished = false;
       return;
     }
     
-    const predicteddata = require("../../pred_data/merged_predicted_data.json");
+   
     console.log("!!Function of mongodb is called!!");
     await PredictedCases.deleteMany({})
       .then(async () => {
         console.log("Collection cleared");
+
+        const predicteddata = require("../../pred_data/merged_predicted_data.json");
+        
+        await new Promise((resolve) => setTimeout(resolve, 4000));
+
+        console.log("Delayed for 4 seconds for getting data.");
 
         await PredictedCases.insertMany(predicteddata)
           .then((docs) => {

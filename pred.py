@@ -7,9 +7,11 @@ import numpy as np
 import sys
 import json
 import csv
+import time
 
 
 # Data from backend to python
+location = sys.argv[1]
 json_data = sys.stdin.read()
 json_data = json.loads(json_data)
 df = pd.DataFrame(json_data['days'])
@@ -46,7 +48,9 @@ print(month_details)
 print("All okay for now too")
 
 # taining data
-merged_data = pd.read_csv('./train_data/final_merged_data.csv')
+data = pd.read_csv('./train_data/final_merged_data.csv')
+merged_data = data[data['District'] == f'{location}']
+print(merged_data.head())
 X_train = merged_data.drop(['Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index'], axis=1)  # Drop the target variable column
 y_train = merged_data['Cases']
 X_test = avg_values_df.drop(['Year','Month'],axis=1)
@@ -78,6 +82,8 @@ merged_data_with_details = pd.merge(avg_values_df[['Year', 'Month']], predicted_
 merged_data_with_details.to_csv('./pred_data/merged_predicted_data.csv', index=False)
 
 merged_data_with_details.to_json('./pred_data/merged_predicted_data.json', orient='records')
-
+time.sleep(2)
 print("Good man")
+
+
 
