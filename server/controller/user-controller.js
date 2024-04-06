@@ -63,16 +63,43 @@ exports.getTheData = async (req, res) => {
 
   // await installPythonDependencies();
 
+//   const fs = require("fs");
+
+//   // Specify the path to the JSON file you want to delete
+//   const filePath = "../../pred_data/merged_predicted_data.json";
+//   const filePath2 = "../../pred_data/merged_predicted_data.csv";
+
+//   // Use fs.unlink to delete the file
+//  await fs.unlink(filePath, (err) => {
+//     if (err) {
+//       console.error("Error deleting file:", err);
+//       return;
+//     }
+//     console.log("File deleted successfully");
+//  });
+  
+//    await fs.unlink(filePath2, (err) => {
+//      if (err) {
+//        console.error("Error deleting file2:", err);
+//        return;
+//      }
+//      console.log("File2 deleted successfully");
+  // });
+
   const { spawn } = require("child_process");
   const childPython = spawn("python", ["pred.py", location]);
-let pythonFinished = false;
+  let pythonFinished = false;
+  let jsonData = "";
   // Pass the JSON data to the Python script through stdin
   childPython.stdin.write(JSON.stringify(data));
   childPython.stdin.end();
 
   childPython.stdout.on("data", (data) => {
+     jsonData += data.toString();
     console.log(`stdout : ${data}`);
   });
+
+
 
   childPython.stderr.on("data", (data) => {
     console.error(`stderr : ${data}`);
@@ -84,16 +111,24 @@ let pythonFinished = false;
     // if (code == 0) {
     //    pythonFinished = true;
     // }
+    let parsedData;
+    try {
+      parsedData = JSON.parse(jsonData);
+      // Use parsedData as needed
+      console.log(parsedData);
+    } catch (error) {
+      console.error("Error parsing JSON data:", error);
+    }
 
     pythonFinished = true;
-    await uploadToMongoDB();
+    await uploadToMongoDB(parsedData);
     
     
   })
 
   // Upload to mongodb
 
-  async function uploadToMongoDB() {
+  async function uploadToMongoDB(predicteddata) {
     if (!pythonFinished) {
       setTimeout(uploadToMongoDB, 1000); // Check again after 1 second
       return;
@@ -105,7 +140,7 @@ let pythonFinished = false;
       .then(async () => {
         console.log("Collection cleared");
 
-        const predicteddata = require("../../pred_data/merged_predicted_data.json");
+        // const predicteddata = require("../../pred_data/merged_predicted_data.json");
         
         await new Promise((resolve) => setTimeout(resolve, 4000));
 

@@ -24,7 +24,7 @@ location = sys.argv[1]
 json_data = sys.stdin.read()
 json_data = json.loads(json_data)
 df = pd.DataFrame(json_data['days'])
-print("All okay for now")
+# print("All okay for now")
 
 
 #Filtering data by not omitting columns and getting averages
@@ -32,12 +32,11 @@ json_data = df.to_json(orient='records', lines=True)
 df_from_json = pd.read_json(json_data, orient='records', lines=True)
 df_from_json.to_csv('./pred_data/Actual_weather_data.csv', index=False)
 
-if 'datetime' in df_from_json.columns:
-    df_from_json['datetime'] = pd.to_datetime(df_from_json['datetime'])
-else:
-    print("Column 'datetime' not found in DataFrame.")
+
+df_from_json['datetime'] = pd.to_datetime(df_from_json['datetime'])
+    # print("Column 'datetime' not found in DataFrame.")
     
-print("All okay for now 2")
+# print("All okay for now 2")
 
 
 df_from_json['Year'] = df_from_json['datetime'].dt.year
@@ -52,14 +51,14 @@ avg_values_df.to_csv(f"./pred_data/pred_average_weather.csv", index=False)
 year_details = avg_values_df["Year"]
 month_details = avg_values_df["Month"]
 
-print(year_details)
-print(month_details)
-print("All okay for now too")
+# print(year_details)
+# print(month_details)
+# print("All okay for now too")
 
 # taining data
 data = pd.read_csv('./train_data/final_merged_data.csv')
 merged_data = data[data['District'] == f'{location}']
-print(merged_data.head())
+# print(merged_data.head())
 X_train = merged_data.drop(['Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index'], axis=1)  # Drop the target variable column
 y_train = merged_data['Cases']
 X_test = avg_values_df.drop(['Year','Month'],axis=1)
@@ -69,10 +68,10 @@ model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
 y_pred_r = np.round(y_pred)
-print(y_pred)
-print(y_pred_r)
+# print(y_pred)
+# print(y_pred_r)
 
-print("All ok guys")
+# print("All ok guys")
 
 
 
@@ -91,8 +90,16 @@ merged_data_with_details = pd.merge(avg_values_df[['Year', 'Month']], predicted_
 merged_data_with_details.to_csv('./pred_data/merged_predicted_data.csv', index=False)
 
 merged_data_with_details.to_json('./pred_data/merged_predicted_data.json', orient='records')
-time.sleep(2)
-print("Good man")
+# time.sleep(2)
+# print("Good man")
+data_dict = merged_data_with_details.to_dict(orient='records')
+json_data = json.dumps(data_dict)
+
+# Print the JSON data to standard output
+print(json_data)
+
+# Make sure to flush the output to ensure it's sent immediately
+sys.stdout.flush()
 
 
 
