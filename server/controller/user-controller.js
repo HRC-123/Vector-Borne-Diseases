@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const PredictedCases = require("../models/predicted");
-
+// import("../controller/requirements.txt")
 //GET
 //Home Page
 exports.homepage = async (req, res) => {
@@ -47,6 +47,21 @@ exports.getTheData = async (req, res) => {
   const data = await response.json();
 
   // console.log(data)
+  const { exec } = require("child_process");
+
+  // Function to install Python dependencies using pip
+  function installPythonDependencies() {
+    exec("pip install pandas scikit-learn numpy", (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error installing files required for python: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      console.error(`stderr: ${stderr}`);
+    });
+  }
+
+  await installPythonDependencies();
 
   const { spawn } = require("child_process");
   const childPython = spawn("python", ["pred.py", location]);
