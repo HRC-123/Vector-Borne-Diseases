@@ -1,11 +1,17 @@
-import pip
-# pip.install('pandas')
-# pip.install('sklearn')
-# pip.install('numpy')
-# pip.install('sys')
-# pip.install('json')
-# pip.install('csv')
-# pip.install('time')
+import subprocess
+import sys
+
+# Function to install packages using pip
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+# List of packages to install
+# List of packages to install
+packages = ['pandas', 'scikit-learn', 'numpy']
+
+# Install each package
+for package in packages:
+    install(package)
 
 
 
