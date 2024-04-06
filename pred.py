@@ -1,11 +1,11 @@
 import pip
-pip.install('pandas')
-pip.install('sklearn')
-pip.install('numpy')
-pip.install('sys')
-pip.install('json')
-pip.install('csv')
-pip.install('time')
+# pip.install('pandas')
+# pip.install('sklearn')
+# pip.install('numpy')
+# pip.install('sys')
+# pip.install('json')
+# pip.install('csv')
+# pip.install('time')
 
 
 
