@@ -6,7 +6,6 @@ def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 # List of packages to install
-# List of packages to install
 packages = ['pandas', 'scikit-learn', 'numpy']
 
 # Install each package
