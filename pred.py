@@ -10,14 +10,18 @@ packages = ['pandas', 'scikit-learn', 'numpy']
 
 # Install each package
 for package in packages:
+    print(f"Installing package: {package}")
     install(package)
+    print(f"Installed package: {package}")
+    
+print("\033[H\033[J")
+
 
 
 
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
-
 import sys
 import json
 import csv
