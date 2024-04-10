@@ -10,11 +10,11 @@ packages = ['pandas', 'scikit-learn', 'numpy']
 
 # Install each package
 for package in packages:
-    print(f"Installing package: {package}")
+    # print(f"Installing package: {package}")
     install(package)
-    print(f"Installed package: {package}")
+    # print(f"Installed package: {package}")
     
-print("\033[H\033[J")
+# print("\033[H\033[J")
 
 
 
