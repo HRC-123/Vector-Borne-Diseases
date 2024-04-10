@@ -3,7 +3,8 @@ import sys
 
 # Function to install packages using pip
 def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
+
 
 # List of packages to install
 packages = ['pandas', 'scikit-learn', 'numpy']
