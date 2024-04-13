@@ -11,13 +11,11 @@
   
 }
 
-.map{
-    margin:0 6%;
-    /* border:2px solid black; */
-}
 
 iframe{
     width:100%;
-    aspect-ratio: 1.75;
+    /* aspect-ratio: 1.75; */
+    /* margin-left:0px; */
+    /* margin-right:40px; */
 }
 

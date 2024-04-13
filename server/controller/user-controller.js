@@ -38,7 +38,7 @@ exports.getTheData = async (req, res) => {
   const location = body.location;
   const from = body.from;
   const to = body.to;
-  let key = "EB36A28R7CW4FW3M5PW4KP5Z8";
+  let key = "EJ36RA47MPQKB6JB39SDUEKV8";
 
   console.log(location, from, to);
   const response = await fetch(
@@ -162,7 +162,10 @@ exports.getTheData = async (req, res) => {
     console.log("Uploading done");
   }
 
- 
-  res.redirect("/predict");
+  await setTimeout(() => {
+    console.log("Shimmering");
+    res.redirect("/predict");
+ },6000)
+  
 };
 
