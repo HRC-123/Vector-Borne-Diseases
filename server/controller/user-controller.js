@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
-const PredictedCases = require("../models/predicted");
+const PredictedCases = require("../models/predicted")
+const Cases = require("../models/train");
+const fs = require("fs");
+
 // import("../controller/requirements.txt")
 //GET
 //Home Page
@@ -25,8 +28,30 @@ exports.data = async (req, res) => {
 };
 
 exports.predmain = async (req, res) => {
+  
   const name = "Predicted Cases";
-  res.render("predmain", { page_name: "prediction-main", name });
+  // Train data must be fetfched
+  const Training_Cases = await Cases.find().then((Training_Cases) => {
+     const filePath = "./train_data/final_merged_data.json";
+
+     // Convert data to JSON string
+     const jsonData = JSON.stringify(Training_Cases);
+
+     // Write data to the JSON file
+     fs.writeFile(filePath, jsonData, (err) => {
+       if (err) {
+         console.error("Error writing to file:", err);
+       } else {
+         console.log("Data saved to", filePath);
+       }
+     });
+     res.render("predmain", { page_name: "prediction-main", name });
+  }).catch((err) => {
+    console.log("Some error in user-controller ", err);
+  });
+  // console.log(Training_Cases);
+ 
+
 };
 
 exports.getTheData = async (req, res) => {

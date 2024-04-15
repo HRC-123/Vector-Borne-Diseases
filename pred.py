@@ -17,9 +17,6 @@ import sys
     
 # # print("\033[H\033[J")
 
-
-
-
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
@@ -64,12 +61,25 @@ month_details = avg_values_df["Month"]
 # print(year_details)
 # print(month_details)
 # print("All okay for now too")
+with open('./train_data/final_merged_data.json', 'r') as json_file:
+    train_data = json.load(json_file)
+
+# Open the CSV file in write mode
+with open('./train_data/final_merged_data.csv', 'w', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+
+    # Write the header based on the keys of the first item in the JSON
+    writer.writerow(train_data[0].keys())
+
+    # Write each row
+    for item in train_data:
+        writer.writerow(item.values())
 
 # taining data
 data = pd.read_csv('./train_data/final_merged_data.csv')
 merged_data = data[data['District'] == f'{location}']
 # print(merged_data.head())
-X_train = merged_data.drop(['Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index'], axis=1)  # Drop the target variable column
+X_train = merged_data.drop(['_id','Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index'], axis=1)  # Drop the target variable column
 y_train = merged_data['Cases']
 X_test = avg_values_df.drop(['Year','Month'],axis=1)
 

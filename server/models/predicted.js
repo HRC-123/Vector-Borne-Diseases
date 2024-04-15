@@ -15,4 +15,6 @@ const Predicted_Schema = new Schema({
   },
 });
 
+
+
 module.exports = mongoose.model("PredictedCases", Predicted_Schema);
