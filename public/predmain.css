@@ -3,38 +3,14 @@
 
 .searchdata {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin: 2%;
   font-family: "Noto Sans", sans-serif;
   font-weight: bolder;
   
 }
-.searchdata label {
-    font-weight: bold;
-    color: #333;
-}
 
-
-.searchdata>input{
-  padding:10px;
-  height:40px;
-}
-
-.searchdata button[type="submit"] {
-    padding: 7px 24px;
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.searchdata button[type="submit"]:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
 
 iframe{
     width:100%;

@@ -88,7 +88,6 @@ model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
 y_pred_r = np.round(y_pred)
-y_pred_r = np.where(y_pred_r < 0, 0, y_pred_r)
 # print(y_pred)
 # print(y_pred_r)
 
