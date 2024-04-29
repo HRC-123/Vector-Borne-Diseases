@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const PredictedCases = require("../models/predicted")
+const PredictedCases = require("../models/predicted");
 const Cases = require("../models/train");
 const fs = require("fs");
 
@@ -28,47 +28,50 @@ exports.data = async (req, res) => {
 };
 
 exports.predmain = async (req, res) => {
-  
   const name = "Predicted Cases";
   // Train data must be fetfched
-  const Training_Cases = await Cases.find().then((Training_Cases) => {
-     const filePath = "./train_data/final_merged_data.json";
+  const Training_Cases = await Cases.find()
+    .then((Training_Cases) => {
+      const filePath = "./train_data/final_merged_data.json";
 
-     // Convert data to JSON string
-     const jsonData = JSON.stringify(Training_Cases);
+      // Convert data to JSON string
+      const jsonData = JSON.stringify(Training_Cases);
 
-     // Write data to the JSON file
-     fs.writeFile(filePath, jsonData, (err) => {
-       if (err) {
-         console.error("Error writing to file:", err);
-       } else {
-         console.log("Data saved to", filePath);
-       }
-     });
-    
-    const { exec } = require("child_process");
+      // Write data to the JSON file
+      fs.writeFile(filePath, jsonData, (err) => {
+        if (err) {
+          console.error("Error writing to file:", err);
+        } else {
+          console.log("Data saved to", filePath);
+        }
+      });
 
-    // Execute pip install command with requirements.txt
-    exec("pip install -r requirements.txt", (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error installing Python libraries: ${error.message}`);
-        return;
-      }
-      if (stderr) {
-        console.error(`stderr: ${stderr}`);
-        return;
-      }
-      console.log("Successfully installed Python libraries");
+      const { exec } = require("child_process");
+
+      // Execute pip install command with requirements.txt
+      exec(
+        "python -m pip install -r requirements.txt",
+        (error, stdout, stderr) => {
+          if (error) {
+            console.error(
+              `Error installing Python libraries: ${error.message}`
+            );
+            return;
+          }
+          if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return;
+          }
+          console.log("Successfully installed Python libraries");
+        }
+      );
+
+      res.render("predmain", { page_name: "prediction-main", name });
+    })
+    .catch((err) => {
+      console.log("Some error in user-controller ", err);
     });
-
-    
-     res.render("predmain", { page_name: "prediction-main", name });
-  }).catch((err) => {
-    console.log("Some error in user-controller ", err);
-  });
   // console.log(Training_Cases);
- 
-
 };
 
 exports.getTheData = async (req, res) => {
@@ -82,12 +85,11 @@ exports.getTheData = async (req, res) => {
   const to = body.to;
   let key = "GSPTME74QY4MCLVEWAYKFNZHH";
 
-//   key1 = 'GSPTME74QY4MCLVEWAYKFNZHH'
-// key2 = 'WSNQZWEZNE5AQP2XZQ59X6UQY'
+  //   key1 = 'GSPTME74QY4MCLVEWAYKFNZHH'
+  // key2 = 'WSNQZWEZNE5AQP2XZQ59X6UQY'
 
-
-//  key1 = 'PBFXZFMNYFBEKACLKZCXK4GH6'
-//  key2 = 'LXWFVR47A3GE9W8PKRU3UGGG6'
+  //  key1 = 'PBFXZFMNYFBEKACLKZCXK4GH6'
+  //  key2 = 'LXWFVR47A3GE9W8PKRU3UGGG6'
 
   console.log(location, from, to);
   const response = await fetch(
@@ -112,30 +114,28 @@ exports.getTheData = async (req, res) => {
 
   // await installPythonDependencies();
 
-//   const fs = require("fs");
+  //   const fs = require("fs");
 
-//   // Specify the path to the JSON file you want to delete
-//   const filePath = "../../pred_data/merged_predicted_data.json";
-//   const filePath2 = "../../pred_data/merged_predicted_data.csv";
+  //   // Specify the path to the JSON file you want to delete
+  //   const filePath = "../../pred_data/merged_predicted_data.json";
+  //   const filePath2 = "../../pred_data/merged_predicted_data.csv";
 
-//   // Use fs.unlink to delete the file
-//  await fs.unlink(filePath, (err) => {
-//     if (err) {
-//       console.error("Error deleting file:", err);
-//       return;
-//     }
-//     console.log("File deleted successfully");
-//  });
-  
-//    await fs.unlink(filePath2, (err) => {
-//      if (err) {
-//        console.error("Error deleting file2:", err);
-//        return;
-//      }
-//      console.log("File2 deleted successfully");
+  //   // Use fs.unlink to delete the file
+  //  await fs.unlink(filePath, (err) => {
+  //     if (err) {
+  //       console.error("Error deleting file:", err);
+  //       return;
+  //     }
+  //     console.log("File deleted successfully");
+  //  });
+
+  //    await fs.unlink(filePath2, (err) => {
+  //      if (err) {
+  //        console.error("Error deleting file2:", err);
+  //        return;
+  //      }
+  //      console.log("File2 deleted successfully");
   // });
-
-
 
   const { spawn } = require("child_process");
   const childPython = spawn("python", ["pred.py", location]);
@@ -146,11 +146,9 @@ exports.getTheData = async (req, res) => {
   childPython.stdin.end();
 
   childPython.stdout.on("data", (data) => {
-     jsonData += data.toString();
+    jsonData += data.toString();
     console.log(`stdout : ${data}`);
   });
-
-
 
   childPython.stderr.on("data", (data) => {
     console.error(`stderr : ${data}`);
@@ -173,9 +171,7 @@ exports.getTheData = async (req, res) => {
 
     pythonFinished = true;
     await uploadToMongoDB(parsedData);
-    
-    
-  })
+  });
 
   // Upload to mongodb
 
@@ -184,15 +180,14 @@ exports.getTheData = async (req, res) => {
       setTimeout(uploadToMongoDB, 1000); // Check again after 1 second
       return;
     }
-    
-   
+
     console.log("!!Function of mongodb is called!!");
     await PredictedCases.deleteMany({})
       .then(async () => {
         console.log("Collection cleared");
 
         // const predicteddata = require("../../pred_data/merged_predicted_data.json");
-        
+
         await new Promise((resolve) => setTimeout(resolve, 4000));
 
         console.log("Delayed for 4 seconds for getting data.");
@@ -216,7 +211,5 @@ exports.getTheData = async (req, res) => {
   await setTimeout(() => {
     console.log("Shimmering");
     res.redirect("/predict");
- },6000)
-  
+  }, 6000);
 };
-
