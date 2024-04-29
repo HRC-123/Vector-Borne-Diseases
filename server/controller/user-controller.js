@@ -62,11 +62,13 @@ exports.predmain = async (req, res) => {
             console.error(`stderr: ${stderr}`);
             return;
           }
+
           console.log("Successfully installed Python libraries");
+           res.render("predmain", { page_name: "prediction-main", name });
         }
       );
 
-      res.render("predmain", { page_name: "prediction-main", name });
+     
     })
     .catch((err) => {
       console.log("Some error in user-controller ", err);
