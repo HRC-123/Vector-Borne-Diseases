@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cd ./python && pip install -r requirements.txt",
+    "postinstall": "pip install -r requirements.txt",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
