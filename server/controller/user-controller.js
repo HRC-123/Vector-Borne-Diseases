@@ -45,6 +45,23 @@ exports.predmain = async (req, res) => {
          console.log("Data saved to", filePath);
        }
      });
+    
+    const { exec } = require("child_process");
+
+    // Execute pip install command with requirements.txt
+    exec("pip install -r requirements.txt", (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error installing Python libraries: ${error.message}`);
+        return;
+      }
+      if (stderr) {
+        console.error(`stderr: ${stderr}`);
+        return;
+      }
+      console.log("Successfully installed Python libraries");
+    });
+
+    
      res.render("predmain", { page_name: "prediction-main", name });
   }).catch((err) => {
     console.log("Some error in user-controller ", err);
@@ -117,6 +134,8 @@ exports.getTheData = async (req, res) => {
 //      }
 //      console.log("File2 deleted successfully");
   // });
+
+
 
   const { spawn } = require("child_process");
   const childPython = spawn("python", ["pred.py", location]);
