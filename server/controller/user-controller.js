@@ -63,7 +63,14 @@ exports.getTheData = async (req, res) => {
   const location = body.location;
   const from = body.from;
   const to = body.to;
-  let key = "RPCF6N23JJSRWDKTBS8PUXZ6W";
+  let key = "GSPTME74QY4MCLVEWAYKFNZHH";
+
+//   key1 = 'GSPTME74QY4MCLVEWAYKFNZHH'
+// key2 = 'WSNQZWEZNE5AQP2XZQ59X6UQY'
+
+
+//  key1 = 'PBFXZFMNYFBEKACLKZCXK4GH6'
+//  key2 = 'LXWFVR47A3GE9W8PKRU3UGGG6'
 
   console.log(location, from, to);
   const response = await fetch(
