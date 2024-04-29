@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "source /path/to/venv/bin/activate && pip install -r requirements.txt",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
