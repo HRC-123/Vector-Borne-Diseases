@@ -30,50 +30,51 @@ exports.data = async (req, res) => {
 exports.predmain = async (req, res) => {
   const name = "Predicted Cases";
   // Train data must be fetfched
-  // const Training_Cases = await Cases.find()
-  //   .then((Training_Cases) => {
-  //     const filePath = "./train_data/final_merged_data.json";
+  const Training_Cases = await Cases.find()
+    .then((Training_Cases) => {
+      const filePath = "./train_data/final_merged_data.json";
 
-  //     // Convert data to JSON string
-  //     const jsonData = JSON.stringify(Training_Cases);
+      // Convert data to JSON string
+      const jsonData = JSON.stringify(Training_Cases);
 
-  //     // Write data to the JSON file
-  //     fs.writeFile(filePath, jsonData, (err) => {
-  //       if (err) {
-  //         console.error("Error writing to file:", err);
-  //       } else {
-  //         console.log("Data saved to", filePath);
-  //       }
-  //     });
+      // Write data to the JSON file
+      fs.writeFile(filePath, jsonData, (err) => {
+        if (err) {
+          console.error("Error writing to file:", err);
+        } else {
+          console.log("Data saved to", filePath);
+        }
+      });
 
-  //     const { exec } = require("child_process");
+      const { exec } = require("child_process");
 
-  //     // Execute pip install command with requirements.txt
-  //     exec(
-  //       "python -m pip install -r requirements.txt",
-  //       (error, stdout, stderr) => {
-  //         if (error) {
-  //           console.error(
-  //             `Error installing Python libraries: ${error.message}`
-  //           );
-  //           return;
-  //         }
-  //         if (stderr) {
-  //           console.error(`stderr: ${stderr}`);
-  //           return;
-  //         }
+      // Execute pip install command with requirements.txt
+      exec(
+        "python -m pip install -r requirements.txt",
+        (error, stdout, stderr) => {
+          if (error) {
+            console.error(
+              `Error installing Python libraries: ${error.message}`
+            );
+            return;
+          }
 
-  //         console.log("Successfully installed Python libraries");
-  //       }
-  //     );
-  
-  
-  // })
-  // .catch((err) => {
-    //   console.log("Some error in user-controller ", err);
-    // });
+          if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return;
+          }
+
+          
+          console.log("Successfully installed Python libraries");
+        }
+      );
+  })
+  .catch((err) => {
+      console.log("Some error in user-controller ", err);
+  }).then(() => {
+      res.render("predmain", { page_name: "prediction-main", name });
+    });
     // console.log(Training_Cases);
-             res.render("predmain", { page_name: "prediction-main", name });
 };
 
 exports.getTheData = async (req, res) => {
