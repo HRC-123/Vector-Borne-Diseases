@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+head,body{
+  overflow-x: hidden;
+}
 
 .searchdata {
   display: flex;
@@ -38,10 +41,50 @@
 }
 
 
-iframe{
-    width:100%;
+.frame{
+  height: 76vh;
+  width:100vw;
+  display:flex;
+  margin-top:50px;
+}
+
+.chart{
+    width:40%;
+    height:100%;
     /* aspect-ratio: 1.75; */
     /* margin-left:0px; */
     /* margin-right:40px; */
+    /* margin-top:20px; */
+    margin-left:7%;
+
+}
+
+.cases-border-box{
+   height:100%;
+   width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+/* .cases-box{
+  margin:1px;
+} */
+
+
+
+.cases{
+  width:40%;
+  height:80%;
+  /* margin-top:20px; */
+  margin-left:20px;
+  /* margin-bottom:0px; */
+}
+
+.pie{
+  width:84%;
+  height:35%;
+  /* margin-top:20px; */
+  /* margin-top:0px; */
+  margin-left:20px;
 }
 
