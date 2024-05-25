@@ -44,6 +44,10 @@ body {
   cursor: pointer;
 }
 
+.represent>p{
+  font-size:22px;
+}
+
 .form {
   height: 13%;
   font-size: 16px;
