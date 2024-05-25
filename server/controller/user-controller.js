@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const PredictedCases = require("../models/predicted");
 const Cases = require("../models/train");
 const fs = require("fs");
+const path = require("path");
 
 // import("../controller/requirements.txt")
 //GET
@@ -29,52 +30,81 @@ exports.data = async (req, res) => {
 
 exports.predmain = async (req, res) => {
   const name = "Predicted Cases";
-  // Train data must be fetfched
-  const Training_Cases = await Cases.find()
-    .then((Training_Cases) => {
-      const filePath = "./train_data/final_merged_data.json";
+  // // Train data must be fetfched
+  // const Training_Cases = await Cases.find()
+  //   .then((Training_Cases) => {
+  //     const filePath = "./train_data/final_merged_data.json";
 
-      // Convert data to JSON string
-      const jsonData = JSON.stringify(Training_Cases);
+  //     // Convert data to JSON string
+  //     const jsonData = JSON.stringify(Training_Cases);
 
-      // Write data to the JSON file
-      fs.writeFile(filePath, jsonData, (err) => {
-        if (err) {
-          console.error("Error writing to file:", err);
-        } else {
-          console.log("Data saved to", filePath);
-        }
-      });
+  //     // Write data to the JSON file
+  //     fs.writeFile(filePath, jsonData, (err) => {
+  //       if (err) {
+  //         console.error("Error writing to file:", err);
+  //       } else {
+  //         console.log("Data saved to", filePath);
+  //       }
+  //     });
 
-      const { exec } = require("child_process");
+  //     const { exec } = require("child_process");
 
-      // Execute pip install command with requirements.txt
-      exec(
-        "python -m pip install -r requirements.txt",
-        (error, stdout, stderr) => {
-          if (error) {
-            console.error(
-              `Error installing Python libraries: ${error.message}`
-            );
-            return;
-          }
+  //     // Execute pip install command with requirements.txt
+  //     exec(
+  //       "python -m pip install -r requirements.txt",
+  //       (error, stdout, stderr) => {
+  //         if (error) {
+  //           console.error(
+  //             `Error installing Python libraries: ${error.message}`
+  //           );
+  //           return;
+  //         }
 
-          if (stderr) {
-            console.error(`stderr: ${stderr}`);
-            return;
-          }
+  //         if (stderr) {
+  //           console.error(`stderr: ${stderr}`);
+  //           return;
+  //         }
 
           
-          console.log("Successfully installed Python libraries");
-        }
-      );
-  })
-  .catch((err) => {
-      console.log("Some error in user-controller ", err);
-  }).then(() => {
-      res.render("predmain", { page_name: "prediction-main", name });
-    });
-    // console.log(Training_Cases);
+  //         console.log("Successfully installed Python libraries");
+  //       }
+  //     );
+  // })
+  // .catch((err) => {
+  //     console.log("Some error in user-controller ", err);
+  // }).then(async() => {
+    
+  //   // await uploadWeatherData();
+  //   res.render("predmain", { page_name: "prediction-main", name });
+    
+
+    
+  // });
+  
+//   async function uploadWeatherData() {
+       
+//     const jsonFilePath = "./pred_data/pred_average_weather.json";
+// console.log("Getting weather data1");
+//     // Read JSON file
+//     fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+//       if (err) {
+//         console.error('Error reading JSON file:', err);
+//         return;
+//       }
+      
+//       console.log("Getting weather data");
+//       // Parse JSON data
+//       const weatherData = JSON.parse(data);
+
+//       console.log(weatherData);
+
+
+
+//     });
+//   }
+  //   // console.log(Training_Cases);
+
+  res.render("predmain", { page_name: "prediction-main", name });
 };
 
 exports.getTheData = async (req, res) => {
@@ -86,12 +116,12 @@ exports.getTheData = async (req, res) => {
   const location = body.location;
   const from = body.from;
   const to = body.to;
-  let key = "WSNQZWEZNE5AQP2XZQ59X6UQY";
+  // let key = "WSNQZWEZNE5AQP2XZQ59X6UQY";
 
-  //   key1 = 'GSPTME74QY4MCLVEWAYKFNZHH'
+  //  let key = 'GSPTME74QY4MCLVEWAYKFNZHH'
   // key2 = 'WSNQZWEZNE5AQP2XZQ59X6UQY'
 
-  //  key1 = 'PBFXZFMNYFBEKACLKZCXK4GH6'
+   let key = 'PBFXZFMNYFBEKACLKZCXK4GH6'
   //  key2 = 'LXWFVR47A3GE9W8PKRU3UGGG6'
 
   console.log(location, from, to);
@@ -174,6 +204,10 @@ exports.getTheData = async (req, res) => {
 
     pythonFinished = true;
     await uploadToMongoDB(parsedData);
+
+    // await uploadWeatherData();
+
+   
   });
 
   // Upload to mongodb
@@ -207,12 +241,68 @@ exports.getTheData = async (req, res) => {
         console.error("Error clearing collection:", err);
       });
     // res.redirect("/predict");
+    
 
     console.log("Uploading done");
+    await setTimeout(() => {
+       console.log("Shimmering");
+       res.redirect("/predict");
+     }, 6000);
   }
 
-  await setTimeout(() => {
-    console.log("Shimmering");
-    res.redirect("/predict");
-  }, 6000);
+//   async function uploadWeatherData() {
+       
+//     const jsonFilePath = "../../pred_data/pred_average_weather.json";
+
+// // Read JSON file
+//     fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+//       if (err) {
+//         console.error('Error reading JSON file:', err);
+//         return;
+//       }
+
+//       // Parse JSON data
+//       const weatherData = JSON.parse(data);
+
+//       console.log(weatherData);
+
+
+
+//     });
+
+
+
+//      
+//   }
+
+  
 };
+
+exports.getFileCSV = async (req, res) => {
+  // console.log(__dirname);
+  const filePath = path.join(__dirname, "../../pred_data","merged_predicted_data.csv");
+  res.download(filePath, "Predicted_Cases.csv", (err) => {
+    if (err) {
+      console.error("Error downloading the file:", err);
+    }
+  });
+
+}
+
+exports.getFileJSON = async (req, res) => {
+  // console.log(__dirname);
+  const filePath = path.join(
+    __dirname,
+    "../../pred_data",
+    "merged_predicted_data.json"
+  );
+  res.download(filePath, "Predicted_Cases.json", (err) => {
+    if (err) {
+      console.error("Error downloading the file:", err);
+    }
+  });
+};
+
+
+
+

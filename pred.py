@@ -100,7 +100,7 @@ with open('./train_data/final_merged_data.csv', 'w', newline='') as csv_file:
 data = pd.read_csv('./train_data/final_merged_data.csv')
 merged_data = data[data['District'] == f'{location}']
 # print(merged_data.head())
-X_train = merged_data.drop(['_id','Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index'], axis=1)  # Drop the target variable column
+X_train = merged_data.drop(['_id','Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index','Latitude','Longitude'], axis=1)  # Drop the target variable column
 y_train = merged_data['Cases']
 X_test = avg_values_df.drop(['Year','Month'],axis=1)
 
@@ -150,11 +150,20 @@ merged_data_with_details.to_csv('./pred_data/merged_predicted_data.csv', index=F
 merged_data_with_details.to_json('./pred_data/merged_predicted_data.json', orient='records')
 # time.sleep(2)
 # print("Good man")
+
+avg_values_df.to_json('./pred_data/pred_average_weather.json', orient='records')
+
+
 data_dict = merged_data_with_details.to_dict(orient='records')
 json_data = json.dumps(data_dict)
 
+# weather_dict = avg_values_df.to_dict(orient='records')
+# weather_data = json.dumps(weather_dict)
+
 # Print the JSON data to standard output
 print(json_data)
+
+# print(weather_data)
 
 # Make sure to flush the output to ensure it's sent immediately
 sys.stdout.flush()

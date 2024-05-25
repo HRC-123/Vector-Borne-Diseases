@@ -12,5 +12,7 @@ router.get('/about',userController.about);
 router.get('/data',userController.data);
 router.get('/predict', userController.predmain);
 router.post('/reqdata', userController.getTheData);
+router.get('/getfilecsv', userController.getFileCSV);
+router.get("/getfilejson", userController.getFileJSON);
 module.exports = router;
 
