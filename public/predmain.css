@@ -32,6 +32,14 @@ body {
   padding:10px;
   height:40px;
 }
+.searchdata>select{
+  padding: 10px;
+  height:40px;
+  font-size: 16px;
+  border: 2px solid #001437;
+  border-radius: 0.3rem;
+  color: #001437;
+}
 
 .searchdata button[type="submit"] {
     padding: 7px 24px;
