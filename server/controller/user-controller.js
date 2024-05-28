@@ -169,7 +169,10 @@ exports.getTheData = async (req, res) => {
 //      }
 //      console.log("File2 deleted successfully");
 // });
-
+if(location=="moga%2Cpunjab"){location="moga";}
+else if(location=="sahibzadaajitsinghnagar"){location="sahibzadaajitsinghnagar(mohali)";}
+else if(location=="srimukatsarsahib%2Cpunjab"){location="shrmukatsarsahib";}
+else if(location=="tarntarn%2Cpunjab"){location="tarntaran";}
 const { spawn } = require("child_process");
 const childPython = spawn("python", ["pred.py", location]);
 let pythonFinished = false;
