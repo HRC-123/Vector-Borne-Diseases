@@ -24,7 +24,8 @@ import numpy as np
 import sys
 import json
 import csv
-import time
+from sklearn.model_selection import GridSearchCV
+from sklearn.linear_model import Ridge
 
 
 # Data from backend to python
@@ -120,10 +121,17 @@ X_test = avg_values_df.drop(['Year','Month'],axis=1)
 # y_train = imputer.fit_transform(y_train)
 
 
-model = LinearRegression()
-model.fit(X_train, y_train)
+# model = LinearRegression()
+# model.fit(X_train, y_train)
 
-y_pred = model.predict(X_test)
+param_grid_ridge = {'alpha': [0.01, 0.1, 1, 10, 100]}
+ridge_grid_search = GridSearchCV(Ridge(), param_grid_ridge, cv=5, scoring='neg_mean_squared_error')
+ridge_grid_search.fit(X_train, y_train)
+best_ridge = ridge_grid_search.best_estimator_
+
+y_pred = best_ridge.predict(X_test)
+
+# y_pred = model.predict(X_test)
 y_pred_r = np.round(y_pred)
 # print(y_pred)
 y_pred_r = np.where(y_pred_r < 0, 0, y_pred_r)
