@@ -113,15 +113,15 @@ exports.getTheData = async (req, res) => {
   const body = await req.body;
   console.log(req.body);
   // const location1 = "moga%2Cpunjab";
-  const location = body.location;
+  let location = body.location;
   const from = body.from;
   const to = body.to;
   // let key = "WSNQZWEZNE5AQP2XZQ59X6UQY";
 
-  //  let key = 'GSPTME74QY4MCLVEWAYKFNZHH'
+   let key = 'GSPTME74QY4MCLVEWAYKFNZHH'
   // key2 = 'WSNQZWEZNE5AQP2XZQ59X6UQY'
 
-   let key = 'PBFXZFMNYFBEKACLKZCXK4GH6'
+  //  let key = 'PBFXZFMNYFBEKACLKZCXK4GH6'
   //  key2 = 'LXWFVR47A3GE9W8PKRU3UGGG6'
 
   console.log(location, from, to);
