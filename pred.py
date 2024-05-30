@@ -101,7 +101,7 @@ with open('./train_data/final_merged_data.csv', 'w', newline='') as csv_file:
 data = pd.read_csv('./train_data/final_merged_data.csv')
 merged_data = data[data['District'] == f'{location}']
 # print(merged_data.head())
-X_train = merged_data.drop(['_id','Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index','Latitude','Longitude'], axis=1)  # Drop the target variable column
+X_train = merged_data.drop(['_id','Cases','District','Year','Month','Avg_Visibility','Avg_Snowfall', 'Avg_Snow_Depth', 'Avg_Solar_Radiation', 'Avg_Solar_Energy', 'Avg_UV_Index'], axis=1)  # Drop the target variable column
 y_train = merged_data['Cases']
 X_test = avg_values_df.drop(['Year','Month'],axis=1)
 
