@@ -4,8 +4,8 @@
 *Vector Guard is an innovative machine learning and web-based application designed to revolutionize the prediction and management of vector-borne diseases in Punjab, India. By leveraging advanced machine learning techniques, particularly Ridge Regression, the project aims to significantly reduce the impact of diseases like Malaria. The application empowers public health officials with precise and timely predictions, enabling proactive interventions that can save lives and resources. The 30% improvement in prediction accuracy achieved by Vector Guard underscores its potential to transform public health strategies and outcomes in the region.*
 <br>
 <br>
+![Why need](https://github.com/HRC-123/Vector-Borne-Diseases/assets/98754211/5be72dda-1779-4bc4-a81b-330735e0dc97)
 * **Vector-borne diseases account for more than 17% of all infectious diseases, causing more than 700 000 deaths annually. They can be caused by either parasites, bacteria or viruses**
-
 * **Limited Local Prediction:** Existing disease prediction websites (e.g., WHO) lack state-specific data, making them unsuitable for Punjab.
 * **Public Health Need:** Vector-borne diseases pose a serious health threat if left untreated.
 * **Data Gap:** Historical disease case data not readily available online.
